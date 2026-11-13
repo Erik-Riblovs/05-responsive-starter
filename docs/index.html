@@ -1,32 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Home | My App</title>
-  <link rel="stylesheet" href="assets/app.css">
-</head>
-<body class="min-h-screen bg-white text-black">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home | My App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/app.css" />
+  </head>
+  <body class="min-h-screen bg-white text-black">
+    <header class="bg-gray-200 p-4">
+      <div
+        class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
+      >
+        <p class="text-xl font-bold">My App</p>
 
-  <header class="bg-gray-200 p-4">
-    <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-      <p class="text-xl font-bold">My App</p>
+        <nav
+          aria-label="Main navigation"
+          class="flex flex-col gap-3 sm:flex-row"
+        >
+          <a
+            class="rounded focus-visible:outline-2 focus-visible:outline-offset-2"
+            href="index.html"
+            >Home</a
+          >
+          <a
+            class="rounded focus-visible:outline-2 focus-visible:outline-offset-2"
+            href="how-it-works.html"
+            >How It Works</a
+          >
+          <a
+            class="rounded focus-visible:outline-2 focus-visible:outline-offset-2"
+            href="process.html"
+            >Process</a
+          >
+        </nav>
+      </div>
+    </header>
 
-      <nav aria-label="Main navigation" class="flex flex-col gap-3 sm:flex-row">
-        <a class="rounded focus-visible:outline-2 focus-visible:outline-offset-2" href="index.html">Home</a>
-        <a class="rounded focus-visible:outline-2 focus-visible:outline-offset-2" href="how-it-works.html">How It Works</a>
-        <a class="rounded focus-visible:outline-2 focus-visible:outline-offset-2" href="process.html">Process</a>
-      </nav>
-    </div>
-  </header>
+    <main class="bg-background px-6 py-12">
+      <section
+        class="mx-auto flex min-h-[70vh] max-w-6xl flex-col justify-center gap-6 md:items-start md:gap-8"
+      >
+        <h1 class="font-heading text-title font-bold text-text">
+          Manage Your Health with Confidence
+        </h1>
 
-  <main class="p-6">
-    <h1 class="text-3xl font-bold">Home</h1>
-  </main>
+        <p class="font-body text-body text-text">
+          A simple website helping older adults find health information and
+          access essential services.
+        </p>
 
-  <footer class="p-4 text-center">
-    <p>My App</p>
-  </footer>
+        <a
+          href="how-it-works.html"
+          class="w-fit rounded-lg border-2 border-accent bg-accent px-6 py-3 font-body text-body text-white focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-accent"
+        >
+          Get Started
+        </a>
+      </section>
+    </main>
 
-</body>
+    <footer class="p-4 text-center">
+      <p>My App</p>
+    </footer>
+  </body>
 </html>
