@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Process | My App</title>
+    <title>Process | MedSafe</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,25 +17,109 @@
       <div
         class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
       >
-        <p class="text-xl font-bold">My App</p>
+        <p class="text-xl font-bold">MedSafe</p>
 
         <nav
           aria-label="Main navigation"
           class="flex flex-col gap-3 sm:flex-row"
         >
-          <a href="index.html">Home</a>
-          <a href="how-it-works.html">How It Works</a>
-          <a href="process.html">Process</a>
+          <a
+            class="rounded focus-visible:outline-2 focus-visible:outline-offset-2"
+            href="index.html"
+            >Home</a
+          >
+
+          <a
+            class="rounded focus-visible:outline-2 focus-visible:outline-offset-2"
+            href="how-it-works.html"
+            >How It Works</a
+          >
+
+          <a
+            class="rounded focus-visible:outline-2 focus-visible:outline-offset-2"
+            href="process.html"
+            aria-current="page"
+            >Process</a
+          >
         </nav>
       </div>
     </header>
 
-    <main class="p-6">
-      <h1 class="text-3xl font-bold">Process</h1>
+    <main class="w-full p-6 text-left font-body text-text">
+      <h1 class="mb-8 font-heading text-title font-bold">My Design Process</h1>
+
+      <section class="mb-8">
+        <h2 class="mb-2 text-heading font-bold">Mood board</h2>
+
+        <p>My mood board shows the ideas I got for my MedSafe design.</p>
+
+        <a
+          href="https://www.figma.com/board/BlydwBXTjjph6kMOt8u9hJ/UX-IXD?node-id=33-580"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-accent underline focus-visible:outline-2 focus-visible:outline-offset-2"
+        >
+          View my mood board
+        </a>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="mb-2 text-heading font-bold">UX case study</h2>
+
+        <p>
+          My research focuses on making digital health services easier for older
+          adults to navigate
+        </p>
+
+        <a
+          href="https://www.figma.com/board/BlydwBXTjjph6kMOt8u9hJ/UX-IXD?node-id=33-580"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-accent underline focus-visible:outline-2 focus-visible:outline-offset-2"
+        >
+          View my UX case study
+        </a>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="mb-2 text-heading font-bold">Design system</h2>
+
+        <p class="mb-4">
+          MedSafe uses a blue colour theme, Inter font and consistent spacing
+        </p>
+
+        <div class="flex flex-wrap gap-4">
+          <div class="h-16 w-16 rounded-lg bg-accent"></div>
+          <div class="h-16 w-16 rounded-lg bg-brand-hover"></div>
+          <div class="h-16 w-16 rounded-lg bg-brand-deep"></div>
+          <div class="h-16 w-16 rounded-lg bg-card"></div>
+          <div class="h-16 w-16 rounded-lg bg-card-hover"></div>
+        </div>
+
+        <div class="mt-6">
+          <h3 class="font-heading text-heading font-bold">Typography</h3>
+          <p class="font-body text-body">
+            Inter - Body 18px, Subheading 20px, Heading 24px, Title 32px
+          </p>
+        </div>
+
+        <div class="mt-6">
+          <h3 class="font-heading text-heading font-bold">Spacing</h3>
+          <p class="font-body text-body">4px, 8px, 16px, 24px and 32px</p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="mb-2 text-heading font-bold">How it changed</h2>
+        <p>
+          I made it so my the navigation is clearer and easier for older adults
+          to use with the consistent spacing
+        </p>
+      </section>
     </main>
 
     <footer class="p-4 text-center">
-      <p>My App</p>
+      <p>MedSafe</p>
     </footer>
   </body>
 </html>
