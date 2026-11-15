@@ -24,19 +24,20 @@
           class="flex flex-col gap-3 sm:flex-row"
         >
           <a
-            class="rounded focus-visible:outline-2 focus-visible:outline-offset-2"
+            class="rounded hover:text-accent hover:underline aria-[current=page]:font-bold aria-[current=page]:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             href="index.html"
-            >Home</a
+            aria-current="page"
           >
+            Home
+          </a>
           <a
-            class="rounded focus-visible:outline-2 focus-visible:outline-offset-2"
+            class="rounded hover:text-accent hover:underline aria-[current=page]:font-bold aria-[current=page]:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             href="how-it-works.html"
             >How It Works</a
           >
           <a
-            class="rounded focus-visible:outline-2 focus-visible:outline-offset-2"
+            class="rounded hover:text-accent hover:underline aria-[current=page]:font-bold aria-[current=page]:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             href="process.html"
-            aria-current="page"
             >Process</a
           >
         </nav>
@@ -58,7 +59,7 @@
 
         <a
           href="how-it-works.html"
-          class="w-fit rounded-lg border-2 border-accent bg-accent px-6 py-3 font-body text-body text-white focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-accent"
+          class="w-fit rounded-lg border-2 border-accent bg-accent px-6 py-3 font-body text-body text-white cursor-pointer transition-colors duration-150 motion-reduce:transition-none hover:bg-brand-hover active:bg-brand-deep focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-accent"
         >
           Get Started
         </a>
