@@ -10,10 +10,21 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <script>
+      try {
+        var saved = localStorage.getItem("theme");
+        document.documentElement.dataset.theme =
+          saved === "dark" ? "dark" : "light";
+      } catch (e) {
+        document.documentElement.dataset.theme = "light";
+      }
+    </script>
+
     <link rel="stylesheet" href="assets/app.css" />
   </head>
-  <body class="min-h-screen bg-white text-black">
-    <header class="bg-gray-200 p-4">
+  <body class="min-h-screen bg-background text-text">
+    <header class="bg-card p-4 text-text">
       <div
         class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
       >
@@ -109,6 +120,21 @@
         </div>
       </section>
 
+      <section class="mb-8">
+        <h2 class="mb-2 text-heading font-bold">Week 9 - Dark Mode</h2>
+
+        <p class="mb-4">
+          I added dark mode to my MedSafe home page using the colours from my
+          Figma design. I also added a button that switches between light and
+          dark mode and remembers the choice when the page reloads.
+        </p>
+
+        <p>
+          I added a medical banner and used dark:brightness-75 to make the image
+          a bit darker when dark mode is on.
+        </p>
+      </section>
+
       <section>
         <h2 class="mb-2 text-heading font-bold">How it changed</h2>
         <p>
@@ -118,7 +144,7 @@
       </section>
     </main>
 
-    <footer class="p-4 text-center">
+    <footer class="bg-card p-4 text-center text-text">
       <p>MedSafe</p>
     </footer>
   </body>

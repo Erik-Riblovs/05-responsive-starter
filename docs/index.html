@@ -10,10 +10,21 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <script>
+      try {
+        var saved = localStorage.getItem("theme");
+        document.documentElement.dataset.theme =
+          saved === "dark" ? "dark" : "light";
+      } catch (e) {
+        document.documentElement.dataset.theme = "light";
+      }
+    </script>
+
     <link rel="stylesheet" href="assets/app.css" />
   </head>
   <body class="min-h-screen bg-white text-black">
-    <header class="bg-gray-200 p-4">
+    <header class="bg-card p-4 text-text">
       <div
         class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
       >
@@ -41,6 +52,15 @@
             >Process</a
           >
         </nav>
+
+        <button
+          type="button"
+          data-theme-toggle
+          aria-pressed="false"
+          class="cursor-pointer rounded-lg border-2 border-accent bg-accent px-6 py-3 font-body text-body text-on-accent focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-accent"
+        >
+          Dark mode
+        </button>
       </div>
     </header>
 
@@ -48,6 +68,12 @@
       <section
         class="mx-auto flex min-h-[70vh] max-w-6xl flex-col justify-center gap-6 md:items-start md:gap-8"
       >
+        <img
+          src="assets/images/medical-banner.webp"
+          alt="Medical and healthcare banner"
+          class="w-full max-w-3xl rounded-lg dark:brightness-75"
+        />
+
         <h1 class="font-heading text-title font-bold text-text">
           Manage Your Health with Confidence
         </h1>
@@ -59,15 +85,17 @@
 
         <a
           href="how-it-works.html"
-          class="w-fit rounded-lg border-2 border-accent bg-accent px-6 py-3 font-body text-body text-white cursor-pointer transition-colors duration-150 motion-reduce:transition-none hover:bg-brand-hover active:bg-brand-deep focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-accent"
+          class="w-fit rounded-lg border-2 border-accent bg-accent px-6 py-3 font-body text-body text-on-accent cursor-pointer transition-colors duration-150 motion-reduce:transition-none hover:bg-brand-hover active:bg-brand-deep focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-accent"
         >
           Get Started
         </a>
       </section>
     </main>
 
-    <footer class="p-4 text-center">
+    <footer class="bg-card p-4 text-center text-text">
       <p>MedSafe</p>
     </footer>
+
+    <script src="assets/theme.js" defer></script>
   </body>
 </html>
