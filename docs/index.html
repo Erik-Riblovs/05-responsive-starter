@@ -23,31 +23,34 @@
 
     <link rel="stylesheet" href="assets/app.css" />
   </head>
-  <body class="min-h-screen bg-white text-black">
-    <header class="bg-card p-4 text-text">
+  <body class="min-h-screen bg-background text-text">
+    <header class="bg-accent px-6 py-5 text-on-accent">
       <div
-        class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
+        class="mx-auto flex max-w-[1312px] flex-wrap items-center justify-between gap-8"
       >
-        <p class="text-xl font-bold">MedSafe</p>
+        <div class="flex items-center gap-4">
+          <img src="assets/images/logo.svg" alt="" class="h-[69px] w-[69px]" />
+          <p class="text-title font-bold font-heading">MedSafe</p>
+        </div>
 
         <nav
           aria-label="Main navigation"
-          class="flex flex-col gap-3 sm:flex-row"
+          class="flex flex-wrap items-center gap-8 font-body text-subheading font-medium"
         >
           <a
-            class="rounded hover:text-accent hover:underline aria-[current=page]:font-bold aria-[current=page]:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            class="rounded hover:underline aria-[current=page]:font-bold aria-[current=page]:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-on-accent"
             href="index.html"
             aria-current="page"
           >
             Home
           </a>
           <a
-            class="rounded hover:text-accent hover:underline aria-[current=page]:font-bold aria-[current=page]:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            class="rounded hover:underline aria-[current=page]:font-bold aria-[current=page]:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-on-accent"
             href="how-it-works.html"
             >How It Works</a
           >
           <a
-            class="rounded hover:text-accent hover:underline aria-[current=page]:font-bold aria-[current=page]:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            class="rounded hover:underline aria-[current=page]:font-bold aria-[current=page]:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-on-accent"
             href="process.html"
             >Process</a
           >
@@ -57,38 +60,39 @@
           type="button"
           data-theme-toggle
           aria-pressed="false"
-          class="cursor-pointer rounded-lg border-2 border-accent bg-accent px-6 py-3 font-body text-body text-on-accent focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-accent"
+          class="btn border-on-accent bg-accent text-on-accent focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-on-accent"
         >
           Dark mode
         </button>
       </div>
     </header>
 
-    <main class="bg-background px-6 py-12">
+    <main class="bg-card px-6 py-16">
       <section
-        class="mx-auto flex min-h-[70vh] max-w-6xl flex-col justify-center gap-6 md:items-start md:gap-8"
+        class="mx-auto grid max-w-[1120px] items-center gap-8 md:grid-cols-2"
       >
+        <div class="flex flex-col gap-6">
+          <h1 class="font-heading text-title font-bold text-text">
+            Manage Your Health with Confidence
+          </h1>
+
+          <p class="font-body text-body text-text">
+            A simple website helping older adults find health information and
+            access essential services.
+          </p>
+
+          <a
+            href="how-it-works.html"
+            class="btn w-fit border-accent bg-accent text-on-accent transition-colors duration-150 motion-reduce:transition-none hover:bg-brand-hover active:bg-brand-deep focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-accent"
+          >
+            Get Started
+          </a>
+        </div>
         <img
           src="assets/images/medical-banner.webp"
           alt="Medical and healthcare banner"
           class="w-full max-w-3xl rounded-lg dark:brightness-75"
         />
-
-        <h1 class="font-heading text-title font-bold text-text">
-          Manage Your Health with Confidence
-        </h1>
-
-        <p class="font-body text-body text-text">
-          A simple website helping older adults find health information and
-          access essential services.
-        </p>
-
-        <a
-          href="how-it-works.html"
-          class="w-fit rounded-lg border-2 border-accent bg-accent px-6 py-3 font-body text-body text-on-accent cursor-pointer transition-colors duration-150 motion-reduce:transition-none hover:bg-brand-hover active:bg-brand-deep focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-accent"
-        >
-          Get Started
-        </a>
       </section>
     </main>
 

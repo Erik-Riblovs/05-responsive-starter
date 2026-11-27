@@ -6,7 +6,7 @@
   --color-text: #17324f;
   --color-background: #f4f8fc;
   --color-accent: #005eb8;
-  --color-border: #b7d0e7;
+  --color-border: #7895b2;
 
   --color-brand-hover: #004a91;
   --color-brand-deep: #003b71;
@@ -16,10 +16,11 @@
   --color-white: #ffffff;
   --color-on-accent: #ffffff;
 
-  --text-body: 1.125rem;
+  --text-body: 1.375rem;
   --text-subheading: 1.25rem;
-  --text-heading: 1.5rem;
+  --text-heading: 2.125rem;
   --text-title: 2rem;
+  --text-hero: 2.5rem;
 
   --font-body: "Inter", sans-serif;
   --font-heading: "Inter", sans-serif;
@@ -32,11 +33,17 @@
   --color-border: #6985a3;
 
   --color-brand-hover: #80beff;
-  --color-brand-deep: #2563a6;
+  --color-brand-deep: #3d91e8;
 
   --color-card: #1b3047;
   --color-card-hover: #29445f;
   --color-white: #17283b;
 
   --color-on-accent: #101d2d;
+}
+
+@layer components {
+  .btn {
+    @apply cursor-pointer rounded-lg border-2 px-6 py-3 font-body text-body;
+  }
 }

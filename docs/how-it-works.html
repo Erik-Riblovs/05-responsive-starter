@@ -10,44 +10,76 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <script>
+      try {
+        var saved = localStorage.getItem("theme");
+        document.documentElement.dataset.theme =
+          saved === "dark" ? "dark" : "light";
+      } catch (e) {
+        document.documentElement.dataset.theme = "light";
+      }
+    </script>
     <link rel="stylesheet" href="assets/app.css" />
   </head>
-  <body class="min-h-screen bg-white text-black">
-    <header class="bg-gray-200 p-4">
+  <body class="min-h-screen bg-background text-text">
+    <header class="bg-accent px-6 py-5 text-on-accent">
       <div
-        class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
+        class="mx-auto flex max-w-[1312px] flex-wrap items-center justify-between gap-8"
       >
-        <p class="text-xl font-bold">MedSafe</p>
+        <div class="flex items-center gap-4">
+          <img src="assets/images/logo.svg" alt="" class="h-[69px] w-[69px]" />
+          <p class="text-title font-bold font-heading">MedSafe</p>
+        </div>
 
         <nav
           aria-label="Main navigation"
-          class="flex flex-col gap-3 sm:flex-row"
+          class="flex flex-wrap items-center gap-8 font-body text-subheading font-medium"
         >
           <a
-            class="rounded hover:text-accent hover:underline aria-[current=page]:font-bold aria-[current=page]:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            class="rounded hover:underline aria-[current=page]:font-bold aria-[current=page]:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-on-accent"
             href="index.html"
-            >Home</a
           >
+            Home
+          </a>
           <a
-            class="rounded hover:text-accent hover:underline aria-[current=page]:font-bold aria-[current=page]:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            class="rounded hover:underline aria-[current=page]:font-bold aria-[current=page]:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-on-accent"
             href="how-it-works.html"
+            aria-current="page"
             >How It Works</a
           >
           <a
-            class="rounded hover:text-accent hover:underline aria-[current=page]:font-bold aria-[current=page]:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            class="rounded hover:underline aria-[current=page]:font-bold aria-[current=page]:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-on-accent"
             href="process.html"
             >Process</a
           >
         </nav>
+
+        <button
+          type="button"
+          data-theme-toggle
+          aria-pressed="false"
+          class="btn border-on-accent bg-accent text-on-accent focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-on-accent"
+        >
+          Dark mode
+        </button>
       </div>
     </header>
 
-    <main class="p-6">
-      <h1 class="text-3xl font-bold">How It Works</h1>
+    <main class="mx-auto max-w-[1120px] px-6 py-16">
+      <h1 class="font-heading text-hero font-bold text-text">How It Works</h1>
+      <p class="mt-6 font-body text-body text-text">
+        I designed MedSafe to help older adults manage their health in one
+        place. They can view their medical records, manage appointments, check
+        their prescriptions and find any information they need. I designed the
+        app to be simple and easy to use for people who are not very familiar
+        with technology especially by using detailed help pages with options to
+        contact support
+      </p>
     </main>
 
-    <footer class="p-4 text-center">
+    <footer class="bg-card p-4 text-center text-text">
       <p>MedSafe</p>
     </footer>
+    <script src="assets/theme.js" defer></script>
   </body>
 </html>
